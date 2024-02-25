@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Word格式助手使用说明</title>
+    <style type="text/css">
+        .Heading {
+            font-family: 等线;
+            font-size: x-large;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #f7b75e;
+        }
+
+        .bodytext {
+            font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: justify;
+            text-justify: inter-character;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+            font-family: 黑体;
+            font-size: large;
+            font-weight: bold;
+            color: #0f77d0;
+        }
+
+        #TextArea1 {
+            width: 421px;
+        }
+
+        .auto-style1 {
+            color: #0f084d;
+        }
+
+        .auto-style2 {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: auto; vertical-align: middle; width: 900px">
+        <p class="Heading">
+            二维码功能
+        </p>
+
+        <p class="bodytext">
+            Word Ribbon菜单<strong>格式助手</strong>中如下图所示部分可快速创建二维码。
+        </p>
+        <table>
+            <tr>
+                <td class="auto-style2">
+                    <img alt="" src="images/06001.png" /></td>
+                <td style="vertical-align: top;">
+                    <p class="bodytext">
+                        单击<span class="auto-style1"><strong>创建二维码</strong></span>按钮，程序将根据当前选中的内容创建二维码，创建二维码的相关参数设置可以通过<a href="WAHelpAddInSettings.html">加载项设置</a>进行调整。当前如果未选择任何内容，或者选择的内容为空格时，则程序将提示输入生成二维码的内容；如果当前选择内容内存在超链接，则将以第一个超链接地址作为内容生成二维码，而不以显示内容生成二维码。</p>
+                </td>
+            </tr>
+        </table>
+        <p class="bodytext">
+            如需要更多的二维码设置，单击Ribbon菜单<span class="auto-style1"><strong>二维码</strong></span>右下角的小箭头<img alt="" height="20" src="images/00.png" width="20" />，则可调出<span class="auto-style1"><strong>二维码设置</strong></span>窗口：
+        </p>
+        <img alt="" src="images/06002.png" />
+        <p class="bodytext">
+            本程序根据输入的内容创建二维码，理论上二维码最大容量为2953字节，程序会根据数据量自动选择二维码的等级（等级越高，二维码图形越大）。<span class="auto-style1"><strong>预览</strong></span>二维码可以实时看到将要创建的二维码，并可从预览窗口的右下角看到图片的尺寸。如果输入的内容全为空格，将不会生成二维码。本界面加载时各项设定为<a href="WAHelpAddInSettings.html">加载项设置</a>中的默认设置，但后续调整不影响默认设置。
+        </p>
+        <p class="bodytext">
+            <span class="labels">深色、浅色 </span>指二维码深色块的颜色以及浅色块颜色，建议区别明显的颜色。
+        </p>
+        <p class="bodytext">
+            <span class="labels">模块像素 </span>指一个正方形数据块的像素大小，可以理解为二维码中的色块大小，设置越大的值，整个图片越大，但并非最终生成的二维码图片大小。
+        </p>
+        <p class="bodytext">
+            <span class="labels">二维码纠错等级 </span>分为四级，越高，二维码信息量越大，被遮挡部分时，可识别性会提高，例如中间设置图标的情况下。
+        </p>
+        <p class="bodytext">
+            <span class="labels">创建边框 </span>表示生成的二维码图片是否包含一个边框。
+        </p>
+        <p class="bodytext">
+            <span class="labels">图标文件 </span>显示于二维码中心位置的小型图片。
+        </p>
+        <p class="bodytext">
+            <span class="labels">图标大小 </span>以遮挡二维码的面积百分比计（1-99），设置越大，遮挡二维码信息越多，在纠错等级较低时，可能读取失败。
+        </p>
+        <p class="bodytext">
+            <span class="labels">图标边框 </span>图标与二维码之间添加的一个边框的宽度。
+        </p>
+        <p class="bodytext">
+            <a href="WAHelp.html">返回目录</a>
+        </p>
+    </div>
+
+</body>
+</html>

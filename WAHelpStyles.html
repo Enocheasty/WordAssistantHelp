@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Word格式助手使用说明</title>
+    <style type="text/css">
+        .Heading {
+            font-family: 等线;
+            font-size: x-large;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #f7b75e;
+        }
+
+        .bodytext {
+            font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: justify;
+            text-justify: inter-character;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+            font-family: 黑体;
+            font-size: large;
+            font-weight: bold;
+            color: #0f77d0;
+        }
+
+        #TextArea1 {
+            width: 421px;
+        }
+
+        .auto-style1 {
+            color: #0f084d;
+        }
+
+        .auto-style2 {
+            width: 444px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: auto; vertical-align: middle; width: 900px">
+        <p class="Heading">
+            样式功能
+        </p>
+
+        <p class="bodytext">
+            Word Ribbon菜单<strong>格式助手</strong>中如下图所示部分可进行快速样式设置：
+        </p>
+        <p class="bodytext">
+            <img alt="" src="images/05001.png" />，单击该按钮，则可调出如下<span class="auto-style1"><strong>文档样式设置</strong></span>界面：
+        </p>
+
+        <table>
+            <tr>
+                <td class="auto-style2">
+                    <img alt="" src="images/05002.png" /></td>
+                <td style="vertical-align: top">
+                    <p class="bodytext"><span class="labels">文件 </span>可以选择使用当前文档设置格式或者新建一个文档设置。</p>
+                    <p class="bodytext"><span class="labels">页面 </span>设置文档的页面尺寸，方向、页面边距以及装订线位置，程序默认读取当前文档的设置。默认页边距即为本程序默认设置的页边距，可以通过应用设置修改。</p>
+                    <p class="bodytext"><span class="labels">样式设置 </span>左侧的列表框中列出了本程序预设的样式名称，同时隐藏的预设还包括标题4至标题9，当调整显示标题数时，可以显示或不显示这些样式，创建多级列表选中时，将根据显示的标题级数创建相应级数的多级列表。下方的预览框可以看到当前选择样式的字体及相关信息。样式设置内容，在Word程序运行中会暂时保存在内存中，重启Word程序后，相应的设置内容则会重置为初始设置。</p>
+                    <p class="bodytext"><span class="labels">读取文中样式 </span>可以读取预设样式以及当前样式列表中包含的自定义样式，如果当前文档中存在该样式，则会读取文档中样式的设置，如果不存在则仍为默认设置；由于Word内置编号样式较多，但多数用不上，因此本程序并未全部包括，读取设置编号信息的标题样式，可能存在忽略掉的编号样式。</p>
+                    <p class="bodytext"><span class="labels">样式的新建和删除 </span>当新样式名称框输入样式名称符合规则时，可以点击添加按钮增加样式。另外也可以删除用户自己创建的样式，但是不能删除程序预设的样式。</p>
+                    <p class="bodytext"><span class="labels">样式格式调整 </span>单击样式列表框单个样式时，右侧样式相关内容将启用，按用户需求设置即可，修改缩进及行距等内容时，请注意单位；段落首行缩进的厘米数值和字符数值为互斥属性，设置一个另一个将自动重置为0；</p>
+                </td>
+            </tr>
+        </table>
+        <p class="bodytext">
+            当选中多个样式时，可以同时调整选中样式的格式内容；选中多项时，下方的预览及信息框将只显示第一项样式的内容。
+        </p>
+        <p class="bodytext">
+            <span class="labels">编号样式 </span>编号样式只对标题1至标题9以及列表段落的内置样式生效，当多选包含标题1至标题9或列表段落时，编号样式均为可编辑状态，但尽管如此，更改的结果也只会保存到编号样式中，其余样式不受影响。
+        </p>
+        <p class="bodytext">
+            <span class="labels">预设样式 </span>程序预设的几种风格的文档样式，用户可以根据需求选择其中的样式进行调整。
+        </p>
+        <p class="bodytext">
+            <span class="labels">设置/新建文档 </span>点击后按照上述设置对当前文档或新建文档，并设置样式，如果样式为Word本身的样式则用本程序的设置修改样式，如果没有则新建该样式。
+        </p>
+        <div style="border: medium solid #000080; width: 850px; margin: auto; padding: 20px">
+            <p class="bodytext">
+                <span class="labels">注意：</span>
+            </p>
+            <p class="bodytext">
+                1. 本程序样式列表框中显示的样式及设置，在点击设置/新建文档按钮之前，只存在于本程序设置，不会修改Word本身的样式。
+            </p>
+            <p class="bodytext">
+                2. 本程序设置样式格式时，会根据正文样式的字体大小调整文档网格，即将行距设置为容纳正文字体大小的合适高度，其余行距设置均以此为基准。
+            </p>
+        </div>
+
+        <p class="bodytext">
+            <a href="WAHelp.html">返回目录</a>
+        </p>
+    </div>
+
+</body>
+</html>

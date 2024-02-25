@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Word格式助手使用说明</title>
+    <style type="text/css">
+        .Heading {
+            font-family: 等线;
+            font-size: x-large;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px #f7b75e;
+        }
+
+        .bodytext {
+            font-family:  'Microsoft JhengHei', Arial, Helvetica, sans-serif;
+            font-size: large;
+            text-align: justify;
+            text-justify: inter-character;
+            line-height: 28px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+            font-family: 黑体;
+            font-size: large;
+            font-weight: bold;
+            color: #0f77d0;
+        }
+
+        .auto-style1 {
+            color: #0f084d;
+        }
+
+        #TextArea1 {
+            width: 421px;
+        }
+
+        .auto-style2 {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: auto; vertical-align: middle; width: 900px">
+        <p class="Heading">
+            列表与多级列表功能
+        </p>
+
+        <p class="bodytext">
+            Word Ribbon菜单<strong>格式助手</strong>中如下图所示部分可进行列表与多级列表的操作：
+        </p>
+        <img alt="" src="images/03001.png" />
+        <p class="bodytext">
+            <span class="labels">快速对齐列表 </span>当点击快速对齐列表按钮时，程序将采用默认设置应用到当前位置的列表格式；默认的列表格式可在<a href="WAHelpAddInSettings.html">加载项设置</a>中进行更改。
+        </p>
+        <p class="bodytext">
+            单击Ribbon菜单<span class="auto-style1"><strong>列表</strong></span>右下角小箭头<img alt="" height="20" src="images/00.png" width="20" />，可调出<span class="auto-style1"><strong>列表设置</strong></span>界面如下，进行更多设置：
+        </p>
+        <table>
+            <tr>
+                <td class="auto-style2">
+                    <img alt="" src="images/03002.png" /></td>
+                <td style="vertical-align: top">
+                    <p class="bodytext">
+                        该界面的相关设置与Ribbon菜单中的快速对齐功能并直接相关。
+                    </p>
+                    <p class="bodytext">
+                        <span class="labels">列表设置 </span>有两种方式，一种是<span class="auto-style1"><strong>按默认值设置列表</strong></span>，与Ribbon的快速功能相同；二是<span class="auto-style1"><strong>按下列值设置列表</strong></span>，即按界面上设定的缩进值或者编号样式及格式设置列表。<span class="auto-style1"><strong>随插入点更新</strong></span>选项，意在方便用户及时看到当前插入点位置的列表设置，当您觉得它影响了设置，可以取消勾选。如将<span class="auto-style1"><strong>当前列表缩进值设为默认</strong></span>，相当于自动进行<a href="WAHelpAddInSettings.html">加载项设置</a>中关于列表默认值的设置，这将影响Ribbon菜单中的快速对齐列表功能。<span class="auto-style1"><strong>编号样式</strong></span>以及<span class="auto-style1"><strong>编号格式</strong></span>勾选时，将应用设置的编号样式及编号格式，否则仅调整缩进值。
+                    </p>
+                    <p class="bodytext">
+                        <span class="labels">有效的列表类型 </span>本功能对项目符号类型的列表或者编号形式的列表有效，且不能为大纲类型的列表。并且可以选择单独设置项目符号类型的列表或者编号类型的列表。
+                    </p>
+                    <p class="bodytext">
+                        勾选<span class="auto-style1"><strong>应用到全文列表</strong></span>选项，可将全文有效列表设置为统一的样式及缩进值。
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p class="bodytext">
+            <span class="labels">快速多级列表 </span>当点击下拉菜单快速设置多级列表(2至5级)时，程序将自动创建2至5级的多级列表，并链接到标题样式(标题1至标题5)。缩进值的大小，由程序根据标题样式的字体大小自动计算后设定。因此，建议在使用<span class="auto-style1"><strong>快速多级列表</strong></span>前，先完成标题样式的设置。本功能只能创建阿拉伯数字编号类型的多级列表，即“1、1.1、1.1.1”的编号样式。
+        </p>
+        <p class="bodytext">
+            如需要自定义多级列表，单击Ribbon菜单<span class="auto-style1"><strong>多级列表</strong></span>右下角小箭头<img alt="" height="20" src="images/00.png" width="20" />，可调出<span class="auto-style1"><strong>多级列表设置</strong></span>界面如下：
+        </p>
+        <img alt="" src="images/03003.png" width="900" />
+        <p class="bodytext">
+            <span class="labels">多级列表设置 </span>
+            当选择<span class="auto-style1"><strong>设计列表级数</strong></span>后，将出现对应级数的设置内容，点击<span class="auto-style1"><strong>载入当前多级列表</strong></span>可以载入光标位置的多级列表设置（必须为大纲级别的多级列表）。<span class="auto-style1"><strong>快捷设置</strong></span>面板内可以快速设置所有级别的缩进数值，或者快速链接到标题样式。
+        </p>
+        <p class="bodytext">
+            <span class="labels">编号样式及编号格式 </span>%i表示第i级编号（如%3表示第3级编号），格式的其余内容原样输出（如第%1章，输出为第1章），编号格式至少要包含本级的编号，才可创建多级列表；当编号样式选择正规编号时，此时均按阿拉伯数字输出各级编号，例如：当一级编号样式为简体中文“一、二、三...”时，二级标题选择为正规编号，哪怕二级编号包含一级编号，也不会输出“一.1”的样式，而是输出“1.1”。链接样式：链接样式为Word中的样式之一，推荐链接到Word的内置标题1、标题2……，也可以输入样式名，如果样式名不存在，Word将创建该样式。
+        </p>
+        <p class="bodytext">
+            <span class="labels">关于缩进值 </span>详见下图说明：
+        </p>
+        <img alt="" border="0" src="images/03004.png" width="900" />
+        <p class="bodytext">
+            本程序将缩进分为编号缩进(a)、文本缩进(b)以及编号后缩进(c)三种类型。三者均为相对于页边距的距离，单位为厘米。由于Word的内部设定，当编号后缩进值大于文字缩进值时，效果等同于编号后缩进值与文字缩进值相同。因此，编号后缩进等于或大于文字缩进值时，列表内的文本左侧将对齐。
+        </p>
+        <div style="border: medium solid #000080; width: 850px; margin: auto; padding: 20px;">
+            <p class="bodytext">
+                <span class="labels">注意：</span>
+            </p>
+            <p class="bodytext">
+                1. 多级列表设置仅对大纲级别的多级列表进行设置，如并非大纲级别，本程序设置将不会生效。
+            </p>
+            <p class="bodytext">
+                2. 重复创建多级列表且链接的样式相同的情况下，新创建的多级列表将不会链接到样式。
+            </p>
+            <p class="bodytext">
+                3. 载入当前多级列表后，进行更改应用，将修改当前多级列表设置。
+            </p>
+            <p class="bodytext">
+                4. 载入多级列表时，当编号样式为本程序不支持的样式时，编号样式栏处于未选择状态，只要不更改，则仍然保留原编号样式。
+            </p>
+        </div>
+        <p class="bodytext">
+            <a href="WAHelp.html">返回目录</a>
+        </p>
+    </div>
+
+</body>
+</html>
