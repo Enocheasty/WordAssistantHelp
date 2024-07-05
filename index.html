@@ -13,7 +13,14 @@
         <p>
             本程序安装后，可在Word Ribbon菜单中找到<strong>Word格式助手</strong>选项卡，包含了本程序所有功能。
         </p>
-        <img alt="" src="images/01.png"/>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+            <img class="modal-content" id="image01">
+            <div id="caption"></div>
+        </div>
+        <script type="text/javascript" src="PicturePreview.js"></script>
+        
+        <img id="img_WordAssistantRibbon" alt="Word格式助手Ribbon菜单" src="images/01.png" class="zoomImg" onclick="imagePreview('img_WordAssistantRibbon')">
         <p>本程序所有功能均基于Word软件本身的功能及设定，通过程序增加批处理或者预处理功能，让Word的格式设置更加便捷。本程序适用于MicroSoft Word 2013及之后版本（需.Net Framework 4.7支持）。屏幕分辨率推荐1920x1080以上，否则可能存在程序界面遮挡的情况。本程序为作者根据个人体验对Word功能进行的改善，方便设置及批量操作。本程序所有功能，在Word中均能设置实现，且不能完全替代Word的设置功能。本程序不包含任何网络功能，不传递任何信息。应用本程序可以方便完成部分格式设置工作，但须使用者阅读本说明后，遵循程序相关设定使用。为避免文档格式破坏，重要文件建议做好备份。
         </p>
         
