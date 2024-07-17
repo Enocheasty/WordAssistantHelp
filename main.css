@@ -50,6 +50,10 @@ a {
     font-weight: 800
 }
 
+ul li a:link{color:#0083e8}
+ul li a:hover{color:#ccffee; background-image: linear-gradient(90deg, #131b3e 0%, #4d0000 100%)}
+ul li a:active{color:red}
+
 b, strong {
     font-weight: 800;
     color: #651706;
@@ -100,12 +104,24 @@ p img{
 .remark{
     padding-left: 20px;
     padding-right: 20px;
-    border-left: 3px solid #f00;
+    border-left: 5px solid #800000;
     background-color: #f8f8f8;
 }
 
 ul{
-    list-style-type:decimal;
+    list-style-position: inside;
+}
+ul li{
+    list-style-type: none;
+    background: url("images/ListImg.png") no-repeat 0rem 0.5rem;
+    background-size: 20px 25px;
+    text-indent: 2em;
+    line-height: 2.5em;
+}
+
+ol li::marker{
+    color: #800000;
+    font-weight: bold;
 }
 
 div{
