@@ -21,8 +21,39 @@
         <script type="text/javascript" src="PicturePreview.js"></script>
         
         <img id="img_WordAssistantRibbon" alt="Word格式助手Ribbon菜单" class="zoomImg" src="images/01.png" onclick="imagePreview('img_WordAssistantRibbon')">
-        <p>本程序所有功能均基于Word软件本身的功能及设定，通过程序增加批处理或者预处理功能，让Word的格式设置更加便捷。本程序适用于MicroSoft Word 2013及之后版本（需.Net Framework 4.7支持）。屏幕分辨率推荐1920x1080以上，否则可能存在程序界面遮挡的情况。本程序为作者根据个人体验对Word功能进行的改善，方便设置及批量操作。本程序所有功能，在Word中均能设置实现，且不能完全替代Word的设置功能。本程序不包含任何网络功能，不传递任何信息。应用本程序可以方便完成部分格式设置工作，但须使用者阅读本说明后，遵循程序相关设定使用。为避免文档格式破坏，重要文件建议做好备份。
+        <p>本程序所有功能均基于Word软件本身的功能及设定，通过程序增加批处理或者预处理功能，让Word的格式设置更加便捷。本程序适用于MicroSoft Word 2013及之后版本（需.Net Framework 4.8支持）。屏幕分辨率推荐1920x1080以上，否则可能存在程序界面遮挡的情况。本程序为作者根据个人体验对Word功能进行的改善，方便设置及批量操作。本程序所有功能，在Word中均能设置实现，且不能完全替代Word的设置功能。本程序不包含任何网络功能，不传递任何信息。应用本程序可以方便完成部分格式设置工作，但须使用者阅读本说明后，遵循程序相关设定使用。为避免文档格式破坏，重要文件建议做好备份。
         </p>
+        <p>本程序开发环境为MS Word2019版，VS2022，程序在1.3版时，取消了安装检查限制，也就是未安装Word程序依然可以安装本插件，如需要在WPS中运行，需修改注册表相关参数。参考如下批处理代码：</p>
+        <!-- 带标题的代码块 -->
+        <div class="code-header">
+            <span>启用WPS插件.bat</span>
+            <button class="copy-btn">复制</button>
+                <pre><code class="language-cmd">
+@echo off
+chcp 65001 > nul
+setlocal enabledelayedexpansion
+
+REM 定义要查询和添加的插件名称
+set "wordPlugin=WordAssistant"
+
+REM 定义Office和WPS的注册表路径
+set "officeWordAddins=HKCU\Software\Microsoft\Office\Word\Addins"
+set "wpsWordAddins=HKCU\Software\Kingsoft\Office\WPS\AddinsWL"
+
+REM 检查并添加Word插件
+reg query "%officeWordAddins%\%wordPlugin%" >nul 2>&amp;1
+if %errorlevel% equ 0 (
+    reg add "%wpsWordAddins%" /v "%wordPlugin%" /t REG_SZ /d "%wordPlugin%" /f
+    echo 已添加Word插件项：%wordPlugin%
+) else (
+    echo 未找到Word插件：%wordPlugin%
+)
+
+echo.
+echo 操作完成！请重启WPS Office应用程序使更改生效。
+pause
+                </code></pre>
+        </div>
         
         <p class="remark">
             <strong>如因本程序造成您的文档格式混乱，作者表示歉意，但不承诺承担由此造成的损失！</strong>
@@ -45,8 +76,52 @@
             <li><a href="WAUtilities.html">工具箱</a></li>
             <li><a href="WAHelpAddInSettings.html">加载项设置</a></li>
         </ul>
-
     </body>
-    
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const copyButtons = document.querySelectorAll('.copy-btn');
+          copyButtons.forEach(btn => {
+            btn.addEventListener('click', async function() {
+              console.log("复制按钮被点击");
+              // 更健壮的选择器
+              const codeContainer = this.nextElementSibling.querySelector('code') || 
+                                   this.nextElementSibling;
+
+              const code = codeContainer.innerText;
+              try {
+                // 现代API
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                  await navigator.clipboard.writeText(code);
+                } 
+                // 兼容方案
+                else {
+                  const textArea = document.createElement('textarea');
+                  textArea.value = code;
+                  textArea.style.position = 'fixed';
+                  textArea.style.opacity = '0';
+                  document.body.appendChild(textArea);
+                  textArea.select();
+
+                  const success = document.execCommand('copy');
+                  document.body.removeChild(textArea);
+                }
+
+                // 视觉反馈
+                const originalText = this.textContent;
+                this.textContent = '✓ 已复制';
+                this.style.background = '#2196F3';
+
+                setTimeout(() => {
+                  this.textContent = originalText;
+                  this.style.background = '#4CAF50';
+                }, 2000);
+              } catch (err) {
+                console.error('复制失败:', err);
+                this.textContent = '❌ 失败';
+                setTimeout(() => this.textContent = '复制', 2000);
+              }
+            });
+          });
+        });
+    </script>
 </html>

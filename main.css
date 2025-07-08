@@ -254,3 +254,91 @@ th:nth-child(n+2), td:nth-child(n+2){
         width: 100%;
     }
 }
+
+/* 基础代码样式 */
+code {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-size: 0.95em;
+    color: #d63384;
+}
+
+/* 代码块容器 */
+pre {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 1.2em;
+    overflow: auto;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 1.5em 0;
+}
+
+/* 代码块内的代码 */
+pre code {
+    background: transparent;
+    color: #f8f8f2;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+/* 语法高亮配色 (类VS Code风格) */
+.hl-keyword { color: #cc99cd; }      /* 关键字 */
+.hl-function { color: #f08d49; }     /* 函数名 */
+.hl-string { color: #7ec699; }       /* 字符串 */
+.hl-comment { color: #999; }         /* 注释 */
+.hl-attr { color: #e2777a; }         /* HTML属性/JSX属性 */
+.hl-number { color: #f08d49; }       /* 数字 */
+.hl-class { color: #e5c07b; }        /* 类名 */
+.hl-tag { color: #e2777a; }          /* HTML标签 */
+/* 批处理特有语法高亮 */
+.hl-batch-command { color: #4ec9b0; }  /* 命令：echo, set, etc */
+.hl-batch-label { color: #c586c0; }    /* 标签：:start, :end */
+.hl-batch-variable { color: #9cdcfe; } /* 变量：%name%, %1 */
+.hl-batch-operator { color: #d4d4d4; } /* 操作符：==, |, > */
+.hl-batch-comment { color: #6a9955; }  /* 注释：rem 或 :: */
+
+
+/* 滚动条样式 */
+pre::-webkit-scrollbar {
+    height: 8px;
+    background: transparent;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: #5e5e5e;
+    border-radius: 4px;
+}
+
+/* 代码标题 */
+.code-header {
+    position: relative;
+    background: #252525;
+    color: #ccc;
+    padding: 0.6em 1em;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.85em;
+    display: flex;
+    justify-content: space-between;
+    font-family: system-ui, sans-serif;
+    display: block;
+}
+
+/* 复制按钮 */
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+
+    right: 10px;
+
+}
+
+.copy-btn:hover {
+    color: #fff;
+}
